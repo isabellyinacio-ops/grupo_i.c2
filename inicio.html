@@ -1,0 +1,918 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventory Control Agrícola | Gestão Inteligente</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='inicio.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="#inicio" class="logo-area">
+
+                <img src="{{ url_for('static', filename='ICBRANCO.png') }}"
+                     alt="Logo IC Agrícola">
+
+                <div class="logo-text">
+                    <strong>Inventory Control</strong>
+                    <span>AGRÍCOLA</span>
+                </div>
+
+            </a>
+
+            <button class="menu-mobile" id="menuMobile"
+                    aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#inicio" class="nav-link ativo">Início</a>
+                <a href="#sobre" class="nav-link">Sobre o sistema</a>
+                <a href="#funcionalidades" class="nav-link">Funcionalidades</a>
+                <a href="#demonstracao" class="nav-link">Demonstração</a>
+
+                <a href="/login" class="btn-login">
+                    Entrar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/5519999023901"
+       target="_blank"
+       rel="noopener noreferrer"
+       id="whatsapp_fixo"
+       aria-label="Fale conosco pelo WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-container">
+
+                <div class="hero-text">
+
+                    <span class="hero-tag">
+                        <i class="fa-solid fa-leaf"></i>
+                        TECNOLOGIA PARA O AGRONEGÓCIO
+                    </span>
+
+                    <h1>
+                        O controle do seu estoque
+                        <span>começa aqui.</span>
+                    </h1>
+
+                    <p>
+                        Gerencie produtos, acompanhe movimentações e
+                        mantenha seu estoque agrícola sempre organizado.
+                        Tudo em um só lugar, de maneira simples e eficiente.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="/cadastro" class="btn-principal">
+                            Começar agora
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#sobre" class="btn-secundario">
+                            Conheça o sistema
+                            <i class="fa-solid fa-circle-play"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="hero-info">
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Gestão simplificada
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Controle em tempo real
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRÉVIA VISUAL DO SISTEMA -->
+                <div class="hero-preview">
+
+                    <div class="preview-window">
+
+                        <div class="preview-top">
+
+                            <div class="preview-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span>IC AGRÍCOLA</span>
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </div>
+
+                        <div class="preview-content">
+
+                            <div class="preview-heading">
+                                <div>
+                                    <small>PAINEL DE CONTROLE</small>
+                                    <h3>Visão geral</h3>
+                                </div>
+
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+
+                            <div class="preview-stats">
+
+                                <div class="preview-card">
+                                    <div class="preview-icon">
+                                        <i class="fa-solid fa-box"></i>
+                                    </div>
+                                    <small>Produtos</small>
+                                    <strong>128</strong>
+                                    <span>Itens cadastrados</span>
+                                </div>
+
+                                <div class="preview-card">
+                                    <div class="preview-icon verde">
+                                        <i class="fa-solid fa-warehouse"></i>
+                                    </div>
+                                    <small>Quantidade</small>
+                                    <strong>846</strong>
+                                    <span>Itens em estoque</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="preview-table">
+
+                                <div class="table-heading">
+                                    <strong>Produtos em estoque</strong>
+                                    <span>Ver todos</span>
+                                </div>
+
+                                <div class="table-row">
+                                    <div class="product-icon">
+                                        <i class="fa-solid fa-gear"></i>
+                                    </div>
+
+                                    <div class="product-info">
+                                        <strong>Filtro de óleo</strong>
+                                        <small>Peças agrícolas</small>
+                                    </div>
+
+                                    <div class="product-status ok">
+                                        25 un.
+                                    </div>
+                                </div>
+
+                                <div class="table-row">
+                                    <div class="product-icon">
+                                        <i class="fa-solid fa-gears"></i>
+                                    </div>
+
+                                    <div class="product-info">
+                                        <strong>Correia</strong>
+                                        <small>Peças agrícolas</small>
+                                    </div>
+
+                                    <div class="product-status baixo">
+                                        5 un.
+                                    </div>
+                                </div>
+
+                                <div class="table-row">
+                                    <div class="product-icon">
+                                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    </div>
+
+                                    <div class="product-info">
+                                        <strong>Parafuso motor</strong>
+                                        <small>Peças agrícolas</small>
+                                    </div>
+
+                                    <div class="product-status critico">
+                                        0 un.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card">
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+
+                        <div>
+                            <strong>Estoque baixo!</strong>
+                            <span>Fique atento às quantidades.</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-decoration"></div>
+
+        </section>
+
+
+        <!-- SOBRE O SISTEMA -->
+        <section class="sobre" id="sobre">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">CONHEÇA O IC AGRÍCOLA</span>
+
+                    <h2>
+                        Mais organização para
+                        <span>sua gestão agrícola.</span>
+                    </h2>
+
+                    <p>
+                        Uma solução desenvolvida para facilitar o
+                        gerenciamento de estoques, trazendo mais
+                        praticidade e controle para o seu dia a dia.
+                    </p>
+
+                </div>
+
+
+                <div class="sobre-content">
+
+                    <div class="sobre-image">
+
+                        <img src="{{ url_for('static', filename='SobreNos.jpg') }}"
+                             alt="Sistema de controle de estoque agrícola">
+
+                        <div class="image-label">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>Organização e eficiência em um só lugar</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sobre-text">
+
+                        <span class="section-tag">NOSSA PROPOSTA</span>
+
+                        <h3>
+                            Simplifique o controle.
+                            Ganhe mais tempo.
+                        </h3>
+
+                        <p>
+                            O Inventory Control Agrícola foi desenvolvido
+                            para ajudar no acompanhamento dos produtos,
+                            entradas, saídas e demais informações
+                            importantes do estoque.
+                        </p>
+
+                        <p>
+                            Com uma interface intuitiva e recursos
+                            organizados, você consegue acompanhar as
+                            informações do seu negócio com mais facilidade.
+                        </p>
+
+                        <div class="sobre-beneficios">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Cadastro e organização de produtos
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Acompanhamento das movimentações
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Identificação de estoque baixo
+                            </div>
+
+                        </div>
+
+                        <a href="/cadastro" class="btn-principal">
+                            Conheça o sistema
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VÍDEO -->
+                <div class="video-section">
+
+                    <div class="video-text">
+
+                        <span class="section-tag">VEJA NA PRÁTICA</span>
+
+                        <h3>
+                            Conheça um pouco mais
+                            do nosso sistema.
+                        </h3>
+
+                        <p>
+                            Confira a demonstração e descubra como o
+                            IC Agrícola pode facilitar o controle
+                            do seu estoque.
+                        </p>
+
+                    </div>
+
+                    <div class="video-lado">
+
+                        <video controls muted loop playsinline>
+
+                            <source
+                                src="{{ url_for('static', filename='estoque.vd.mp4') }}"
+                                type="video/mp4">
+
+                            Seu navegador não suporta vídeos.
+
+                        </video>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FUNCIONALIDADES -->
+        <section class="funcionalidades" id="funcionalidades">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">RECURSOS DO SISTEMA</span>
+
+                    <h2>
+                        Tudo o que você precisa
+                        <span>para organizar seu estoque.</span>
+                    </h2>
+
+                    <p>
+                        Ferramentas pensadas para tornar o gerenciamento
+                        dos seus produtos mais simples e eficiente.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+
+                        <h3>Cadastro de produtos</h3>
+
+                        <p>
+                            Cadastre e organize seus produtos,
+                            incluindo informações como nome,
+                            categoria e preço unitário.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+
+                        <h3>Entrada e saída</h3>
+
+                        <p>
+                            Registre todas as movimentações
+                            e acompanhe as alterações nas
+                            quantidades do estoque.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <h3>Alerta de estoque baixo</h3>
+
+                        <p>
+                            Identifique produtos com quantidades
+                            reduzidas e acompanhe os itens que
+                            precisam de reposição.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+
+                        <h3>Dashboard e relatórios</h3>
+
+                        <p>
+                            Visualize informações importantes
+                            sobre os produtos, quantidades e
+                            movimentações do estoque.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+
+                        <h3>Controle de categorias</h3>
+
+                        <p>
+                            Organize seus produtos por categorias
+                            e encontre as informações com
+                            mais facilidade.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+
+                        <h3>Fornecedores e compras</h3>
+
+                        <p>
+                            Organize os dados dos fornecedores
+                            e mantenha as informações de compras
+                            mais acessíveis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DEMONSTRAÇÃO -->
+        <section class="demonstracao" id="demonstracao">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">INTERFACE DO SISTEMA</span>
+
+                    <h2>
+                        Uma gestão mais
+                        <span>visual e organizada.</span>
+                    </h2>
+
+                    <p>
+                        Uma prévia de como as informações do seu estoque
+                        podem ser organizadas no IC Agrícola.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-preview">
+
+                    <aside class="demo-sidebar">
+
+                        <div class="demo-logo">
+                            
+                            <span>IC Agrícola</span>
+                        </div>
+
+                        <div class="demo-menu">
+
+                            <div class="demo-menu-item ativo">
+                                <i class="fa-solid fa-house"></i>
+                                Dashboard
+                            </div>
+
+                            <div class="demo-menu-item">
+                                <i class="fa-solid fa-box"></i>
+                                Produtos
+                            </div>
+
+                            <div class="demo-menu-item">
+                                <i class="fa-solid fa-tags"></i>
+                                Categorias
+                            </div>
+
+                            <div class="demo-menu-item">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                Entrada
+                            </div>
+
+                            <div class="demo-menu-item">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                Saída
+                            </div>
+
+                            <div class="demo-menu-item">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                Movimentações
+                            </div>
+
+                        </div>
+
+                        <div class="demo-sidebar-bottom">
+                            <i class="fa-solid fa-circle-user"></i>
+                            Demonstração
+                        </div>
+
+                    </aside>
+
+
+                    <div class="demo-content">
+
+                        <div class="demo-topbar">
+
+                            <div>
+                                <small>PAINEL PRINCIPAL</small>
+                                <h3>Visão geral</h3>
+                            </div>
+
+                        </div>
+
+
+                        <div class="demo-stats">
+
+                            <div class="demo-stat-card">
+                                <div class="stat-icon">
+                                    <i class="fa-solid fa-boxes-stacked"></i>
+                                </div>
+
+                                <div>
+                                    <small>Total de produtos</small>
+                                    <strong>128</strong>
+                                </div>
+                            </div>
+
+                            <div class="demo-stat-card">
+                                <div class="stat-icon">
+                                    <i class="fa-solid fa-warehouse"></i>
+                                </div>
+
+                                <div>
+                                    <small>Itens em estoque</small>
+                                    <strong>846</strong>
+                                </div>
+                            </div>
+
+                            <div class="demo-stat-card">
+                                <div class="stat-icon alerta">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+
+                                <div>
+                                    <small>Estoque baixo</small>
+                                    <strong>08</strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="demo-table-container">
+
+                            <div class="demo-table-header">
+                                <h4>Produtos em estoque</h4>
+                                <span>Visualização demonstrativa</span>
+                            </div>
+
+                            <div class="demo-table-scroll">
+
+                                <table class="demo-table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Produto</th>
+                                            <th>Categoria</th>
+                                            <th>Quantidade</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td>Filtro de óleo</td>
+                                            <td>Peças</td>
+                                            <td>25</td>
+                                            <td><span class="status-badge normal">Normal</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Correia</td>
+                                            <td>Peças</td>
+                                            <td>5</td>
+                                            <td><span class="status-badge baixo">Baixo</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Parafuso motor</td>
+                                            <td>Componentes</td>
+                                            <td>0</td>
+                                            <td><span class="status-badge critico">Crítico</span></td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="demo-observacao">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Os dados apresentados são ilustrativos e não representam
+                    informações reais do banco de dados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <div class="cta-content">
+
+                <div class="cta-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <span>COMECE AGORA</span>
+
+                <h2>
+                    Organize seu estoque.
+                    Simplifique sua gestão.
+                </h2>
+
+                <p>
+                    Tenha mais controle sobre seus produtos e
+                    movimentações com o Inventory Control Agrícola.
+                </p>
+
+                <a href="/cadastro" class="btn-cta">
+                    Criar minha conta
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#inicio" class="footer-logo">
+
+                    <img src="{{ url_for('static', filename='ICBRANCO.png') }}"
+                         alt="Logo IC Agrícola">
+
+                    <div>
+                        <strong>Inventory Control</strong>
+                        <span>AGRÍCOLA</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Tecnologia e organização para tornar
+                    o controle do estoque agrícola mais simples.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Navegação</h4>
+
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre o sistema</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#demonstracao">Demonstração</a>
+
+            </div>
+
+
+            <div class="footer-contato">
+
+                <h4>Entre em contato</h4>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    inventorycontrol.agricola@gmail.com
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    (19) 99902-3901
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Inventory Control Agrícola.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // MENU MOBILE
+        const menuMobile = document.getElementById('menuMobile');
+        const navMenu = document.getElementById('navMenu');
+
+        menuMobile.addEventListener('click', () => {
+
+            navMenu.classList.toggle('aberto');
+
+            const icone = menuMobile.querySelector('i');
+
+            if (navMenu.classList.contains('aberto')) {
+                icone.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                icone.classList.replace('fa-xmark', 'fa-bars');
+            }
+
+        });
+
+
+        // FECHAR MENU AO CLICAR EM UM LINK
+        document.querySelectorAll('.nav-link').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                navMenu.classList.remove('aberto');
+
+                const icone = menuMobile.querySelector('i');
+
+                icone.classList.replace('fa-xmark', 'fa-bars');
+
+            });
+
+        });
+
+
+        // ANIMAÇÃO DOS ELEMENTOS AO ROLAR A PÁGINA
+        const elementos = document.querySelectorAll(
+            '.card, .section-heading, .sobre-content, .video-section'
+        );
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('visivel');
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.12
+        });
+
+        elementos.forEach(elemento => {
+            observer.observe(elemento);
+        });
+
+
+        // DESTAQUE DO LINK DA SEÇÃO ATUAL
+        const secoes = document.querySelectorAll('main section[id]');
+        const links = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+
+            let atual = 'inicio';
+
+            secoes.forEach(secao => {
+
+                if (window.scrollY >= secao.offsetTop - 150) {
+                    atual = secao.id;
+                }
+
+            });
+
+            links.forEach(link => {
+
+                link.classList.remove('ativo');
+
+                if (link.getAttribute('href') === '#' + atual) {
+                    link.classList.add('ativo');
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
